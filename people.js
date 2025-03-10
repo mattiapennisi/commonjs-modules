@@ -1,7 +1,13 @@
-function createHobbiesArray(hobbyOne, hobbyTwo, hobbyThree) {
-    hobbiesArray = [hobbyOne , hobbyTwo, hobbyThree]
+const {createFullnameObject} = require('./names.js')
+const {createHobbiesArray} = require('./hobbies.js')
 
-    return hobbiesArray
+function createPeopleObject() {
+    const peopleObject = {
+        fullname: createFullnameObject('Mattia', 'Pennisi'),
+        hobbies: createHobbiesArray('Coding', 'Reading', 'Travelling')
+    }
+
+    return peopleObject
 }
 
-module.exports = {createHobbiesArray}
+console.log(createPeopleObject())
